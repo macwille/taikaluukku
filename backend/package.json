@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm run clean && npm run tsc && npm run build:ui && git add . && git commit -m autodeploy && cd ../ && git subtree push --prefix backend heroku main && npm run clean",
+    "deploy": "npm run clean && npm run tsc && npm run build:ui && git add . && git commit -m autodeploy && cd ../ && git subtree push --prefix backend heroku main && cd ./backend && npm run clean",
     "tsc": "tsc",
     "dev": "ts-node-dev src/index.ts",
     "start": "node dist/index.js",
