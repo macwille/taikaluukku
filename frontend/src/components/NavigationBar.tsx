@@ -5,7 +5,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import Login from './Login';
 
 interface NavigationProps {
   loggedUser: string | false;
@@ -31,10 +30,8 @@ const NavigationBar: React.FC<NavigationProps> = ({ loggedUser, setUser }) => {
               <Button component={Link} to={"/"} variant="contained">Tervetuloa</Button>
               <Button component={Link} to={"/videos"} variant="contained">Elokuvat</Button>
               <Typography align="center" variant="h6" component="div" sx={{ flexGrow: 1 }}>Taikaluukku</Typography>
-              {loggedUser ?
+              {loggedUser !== false &&
                 <Button onClick={handleLogout} variant="contained">Log Out</Button>
-                :
-                <Login setUser={setUser} />
               }
             </Stack>
           </Toolbar>
