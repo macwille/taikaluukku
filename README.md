@@ -1,5 +1,5 @@
 # Taikaluukku
-Typescript website for streaming videos from Google Drive. Using googleapis.
+Typescript website for streaming videos from Google Drive using googleapis. The website will look for all .mp4 videos inside the drive of the user.
 
 ## Install
 
@@ -23,7 +23,7 @@ This project relys on Google Cloud Platform for Google Drive APIs.
 
 You need to create a project and enable Drive APIs and generate Client ID and Secret. You need a refresh token you can generate in Oauth playground **!! Remember to chose Drive API v3 in the scopes !!**.
 
-Use same Google profile for all the parts.
+Use same Google profile as the owner of the Google Drive.
 
 [Example Video by Google](https://www.youtube.com/watch?v=DYAwYxVs2TI).
 
