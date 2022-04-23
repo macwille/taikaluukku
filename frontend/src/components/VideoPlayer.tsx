@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useParams } from "react-router-dom"
 import videoService from '../services/video';
 import Iframe from 'react-iframe'
-import { Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import { createSvgIcon } from '@mui/material';
 
 const VideoPlayer = () => {
