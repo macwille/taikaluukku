@@ -19,9 +19,11 @@ For production you want to generate JavaScript code for the backend and generate
 
 ## Google API [Link](https://console.cloud.google.com/)
 
-This project relys on Google Cloud Platform for Google Drive APIs.
+This project relys on Google Cloud Platform for Google Drive APIs. 
 
 You need to create a project and enable Drive APIs and generate Client ID and Secret. You need a refresh token you can generate in Oauth playground **!! Remember to chose Drive API v3 in the scopes !!**.
+
+Use same Google profile for all the parts.
 
 [Example Video by Google](https://www.youtube.com/watch?v=DYAwYxVs2TI).
 
