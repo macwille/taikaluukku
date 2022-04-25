@@ -18,7 +18,6 @@ const VideoPlayer = () => {
       try {
         if (typeof id === 'string') {
           const response = await videoService.getVideo(id);
-          console.log("Response:", response);
         } else {
           console.log('No string given')
         }

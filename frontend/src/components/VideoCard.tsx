@@ -2,7 +2,8 @@
 import { useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
-import { CardActionArea, CardHeader } from "@mui/material";
+import CardActionArea from "@mui/material/CardActionArea"
+import CardHeader from "@mui/material/CardHeader"
 
 interface VideoProps {
   name: string,
@@ -15,14 +16,13 @@ const VideoCard = ({ id, name }: VideoProps) => {
 
   const handleClick = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Action area clicked')
     navigate(`/videos/${id}`)
   }
 
   return (
     <Card style={{ minWidth: '10vw' }}>
       <CardActionArea onClick={handleClick}>
-        <CardContent>
+        <CardContent style={{ justifyContent: 'center', textAlign: 'center' }}>
           <CardHeader title={split} />
         </CardContent>
       </CardActionArea>

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { API_URL } from '../util/config';
 
-const baseUrl = `${API_URL}/video`
+const baseUrl = `${API_URL}/videos`
 
 
 const getVideos = async () => {
@@ -14,9 +14,4 @@ const getVideo = async (id: string) => {
   return response.data
 }
 
-const getSubtitle = async (name: string) => {
-  const response = await axios.get(`${baseUrl}/subtitle/${name}`)
-  return response.data.files
-}
-
-export default { getVideo, getVideos, getSubtitle }
+export default { getVideo, getVideos }
