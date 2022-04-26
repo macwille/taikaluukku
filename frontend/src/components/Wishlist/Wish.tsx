@@ -34,7 +34,7 @@ const Wish = ({ id, name, wishes, setWishes }: WishProps) => {
   if (name) {
     return (
       <div>
-        <Typography > {name} <IconButton size='small' onClick={deleteWish}><DeleteIcon /></IconButton> </Typography>
+        <Typography variant="subtitle1" > {name} <IconButton size='small' onClick={deleteWish}><DeleteIcon /></IconButton> </Typography>
       </div>
     )
   }

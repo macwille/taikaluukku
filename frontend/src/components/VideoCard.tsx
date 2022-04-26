@@ -16,7 +16,12 @@ const VideoCard = ({ id, name }: VideoProps) => {
 
   const handleClick = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate(`/videos/${id}`)
+
+    navigate(`/videos/${id}`, {
+      state: {
+        name: name
+      }
+    })
   }
 
   return (

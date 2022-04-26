@@ -38,7 +38,7 @@ const WishListInput = ({ wishes, setWishes }: WishProps) => {
       justifyItems="center"
     >
       <FormControl variant="standard">
-        <InputLabel htmlFor="my-input">Lisää elokuva toive</InputLabel>
+        <InputLabel htmlFor="my-input">Elokuvatoive</InputLabel>
         <Input id="my-input" aria-describedby="my-helper-text" {...movie} required />
       </FormControl>
       <FormControl variant="standard" style={{ verticalAlign: "bottom", marginLeft: 10 }}>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import videoService from '../services/video';
 import Typography from "@mui/material/Typography"
 import Stack from "@mui/material/Stack"
@@ -37,7 +38,7 @@ const VideoSelection = () => {
     if (list.length > 0) {
       return (
         <>
-          <Stack direction="row" spacing={6} justifyContent='center'>
+          <Stack direction="row" spacing={6}>
             {list}
           </Stack>
         </>
@@ -53,6 +54,9 @@ const VideoSelection = () => {
   }
   return (
     <div id="video-selection">
+      <Helmet>
+        <title>Elokuvat - Taikaluukku</title>
+      </Helmet>
       <Typography variant="h4" paragraph>Elokuvat</Typography>
       {conditionalRender()}
     </div >

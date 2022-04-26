@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import wishService from '../../services/wish'
-import List from "@mui/material/List";
-import Box from "@mui/material/Box";
-import ListItem from "@mui/material/ListItem";
-import Typography from "@mui/material/Typography";
-import WishListInput from "./WishListInput";
+import List from "@mui/material/List"
+import Box from "@mui/material/Box"
+import ListItem from "@mui/material/ListItem"
+import Typography from "@mui/material/Typography"
+import WishListInput from "./WishListInput"
 import Wish from './Wish';
 
 interface IWish {
@@ -33,7 +34,10 @@ const WishList = () => {
 
   return (
     <Box>
-      <Typography>Toivelista</Typography>
+      <Helmet>
+        <title>Toivelista - Taikaluukku</title>
+      </Helmet>
+      <Typography variant="h4" paragraph>Toivelista</Typography>
       <List style={{ listStyleType: "none" }}>
         {list}
       </List>

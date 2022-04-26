@@ -28,7 +28,7 @@ const NavigationBar: React.FC<NavigationProps> = ({ loggedUser, setUser }) => {
           <Toolbar >
             <Stack direction="row" spacing={4} marginLeft={"15%"} justifyContent="center" alignItems="center">
               <Typography align="center" variant="h6" component="div" sx={{ flexGrow: 1 }}>Taikaluukku</Typography>
-              <Button component={Link} to={"/"} variant="contained">Tervetuloa</Button>
+              <Button component={Link} to={"/"} variant="contained">Toivelista</Button>
               <Button component={Link} to={"/videos"} variant="contained">Elokuvat</Button>
               {loggedUser !== false &&
                 <Button onClick={handleLogout} variant="contained">Log Out</Button>
