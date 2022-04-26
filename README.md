@@ -36,5 +36,4 @@ Use same Google profile as the owner of the Google Drive.
 * `SECRET` Any long set of random numbers and letters.
 * `CLIENT_ID` Get from Google console.
 * `CLIENT_SECRET` Get from Google console.
-* `REDIRECT_URI` https://developers.google.com/oauthplayground.
-* `REFRESH_TOKEN` Generated in Oauth playground.
+* `REFRESH_TOKEN` Generated in Oauth2 playground.
