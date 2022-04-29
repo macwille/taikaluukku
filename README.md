@@ -1,5 +1,5 @@
 # Taikaluukku
-Typescript website for streaming videos from Google Drive using googleapis. The website will look for all .mp4 videos inside the drive of the user.
+Typescript React/Node.js website for streaming videos from selected Google Drive.
 
 ## Install
 
