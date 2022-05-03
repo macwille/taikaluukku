@@ -8,7 +8,14 @@ const driveClient = () => {
         clientSecret: config_1.CLIENT_SECRET,
         redirectUri: config_1.REDIRECT_URI,
     });
-    oauth2Client.setCredentials({ refresh_token: config_1.REFRESH_TOKEN, });
+    oauth2Client.on('tokens', (tokens) => {
+        if (tokens.refresh_token) {
+            oauth2Client.setCredentials({ refresh_token: tokens.refresh_token, });
+        }
+        else {
+            oauth2Client.setCredentials({ refresh_token: config_1.REFRESH_TOKEN, });
+        }
+    });
     return googleapis_1.google.drive({ version: 'v3', auth: oauth2Client, });
 };
 exports.default = driveClient;
