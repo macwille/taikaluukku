@@ -3,18 +3,18 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import driveClient from './google';
 
 const videoRouter = Router();
 const drive = driveClient();
 
-videoRouter.get('/', async (_req, res) => {
+videoRouter.get('/', async (_req: Request, res: Response) => {
   const result = await drive.files.list();
   res.send(result.data);
 });
 
-videoRouter.get('/:id', async (req, res) => {
+videoRouter.get('/:id', async (req: Request, res: Response) => {
   const id = req.params.id;
   if (id === "test") {
     res.redirect('/test');

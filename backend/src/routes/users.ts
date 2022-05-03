@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 
-import { Router } from 'express';
+
+import { Router, Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import User from '../models/user';
@@ -11,11 +11,11 @@ import { SECRET } from '../config';
 
 const userRouter = Router();
 
-userRouter.get('/', (_req, res) => {
+userRouter.get('/', (_req: Request, res: Response) => {
   res.send('Fetching all users!');
 });
 
-userRouter.post('/', async (req, res) => {
+userRouter.post('/', async (req: Request, res: Response) => {
   const { name, password } = req.body;
 
   const user = await User.findOne({ name });

@@ -7,6 +7,7 @@ import wishRouter from './routes/wishes';
 import path from 'path';
 import { PORT, MONGODB_URI } from './config';
 import mongoose from 'mongoose';
+import middleware from './util/middleware';
 
 const app = express();
 
@@ -36,6 +37,9 @@ app.get('/*', (_req, res) => {
   });
 });
 
+app.use(middleware.unknownEndpoint);
+
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  (`Server running on port ${PORT}`);
 });
+

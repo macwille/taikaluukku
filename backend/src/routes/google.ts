@@ -9,13 +9,7 @@ const driveClient = () => {
     redirectUri: REDIRECT_URI,
   });
 
-  oauth2Client.on('tokens', (tokens) => {
-    if (tokens.refresh_token) {
-      oauth2Client.setCredentials({ refresh_token: tokens.refresh_token, });
-    } else {
-      oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN, });
-    }
-  });
+  oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN, });
 
   return google.drive({ version: 'v3', auth: oauth2Client, });
 
